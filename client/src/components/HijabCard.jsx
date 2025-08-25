@@ -28,7 +28,7 @@ const HijabCard = ({ style }) => {
     try {
       setLoadingReviews(true);
       const { data } = await axios.get(
-        `https://hackathonserver-production.up.railway.app/api/reviews/style/${style._id}`,
+        `https://final-hackathon-server-ten.vercel.app/api/reviews/style/${style._id}`,
         config
       );
       setReviews(data);
@@ -58,7 +58,7 @@ const HijabCard = ({ style }) => {
 
   const handleDelete = async (reviewId) => {
     try {
-      await axios.delete(`https://hackathonserver-production.up.railway.app/api/reviews/${reviewId}`, config);
+      await axios.delete(`https://final-hackathon-server-ten.vercel.app/api/reviews/${reviewId}`, config);
       fetchReviews();
     } catch (err) {
       console.error('Delete failed:', err.message);
@@ -74,7 +74,7 @@ const HijabCard = ({ style }) => {
   const handleUpdate = async () => {
     try {
       await axios.put(
-        `https://hackathonserver-production.up.railway.app/api/reviews/${editReview._id}`,
+        `https://final-hackathon-server-ten.vercel.app/api/reviews/${editReview._id}`,
         formData,
         config
       );
@@ -90,7 +90,7 @@ const HijabCard = ({ style }) => {
     e.preventDefault();
     try {
       await axios.post(
-        `https://hackathonserver-production.up.railway.app/api/reviews/style/${style._id}`,
+        `https://final-hackathon-server-ten.vercel.app/api/reviews/style/${style._id}`,
         newReview,
         config
       );

@@ -19,7 +19,7 @@ dbConnection();
 
 // Middleware
 app.use(cors({
-  origin: "https://fh-client-five.vercel.app/" || '*',
+  origin: "https://final-hackathon-server-ten.vercel.app/" || '*',
   credentials: true,
 }));
 app.use(express.json());

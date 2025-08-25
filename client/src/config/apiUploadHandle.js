@@ -1,7 +1,7 @@
 import axios from "axios"
 
 // export const baseUrl = `http://localhost:2525/api/upload`
-export const baseUrl = `https://fh-client-five.vercel.app/api/upload`
+export const baseUrl = `https://final-hackathon-server-ten.vercel.app/api/upload`
 
 const apiUploadHandle = axios.create({
     baseURL: baseUrl,
